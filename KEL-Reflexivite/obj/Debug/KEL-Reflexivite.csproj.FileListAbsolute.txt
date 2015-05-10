@@ -1,0 +1,11 @@
+c:\users\charles\documents\visual studio 2015\Projects\KEL-Reflexivite\KEL-Reflexivite\bin\Debug\KEL-Reflexivite.exe.config
+c:\users\charles\documents\visual studio 2015\Projects\KEL-Reflexivite\KEL-Reflexivite\bin\Debug\KEL-Reflexivite.exe
+c:\users\charles\documents\visual studio 2015\Projects\KEL-Reflexivite\KEL-Reflexivite\bin\Debug\KEL-Reflexivite.pdb
+c:\users\charles\documents\visual studio 2015\Projects\KEL-Reflexivite\KEL-Reflexivite\obj\Debug\KEL-Reflexivite.csprojResolveAssemblyReference.cache
+c:\users\charles\documents\visual studio 2015\Projects\KEL-Reflexivite\KEL-Reflexivite\obj\Debug\KEL_Reflexivite.Properties.Resources.resources
+c:\users\charles\documents\visual studio 2015\Projects\KEL-Reflexivite\KEL-Reflexivite\obj\Debug\KEL-Reflexivite.csproj.GenerateResource.Cache
+c:\users\charles\documents\visual studio 2015\Projects\KEL-Reflexivite\KEL-Reflexivite\obj\Debug\KEL-Reflexivite.exe
+c:\users\charles\documents\visual studio 2015\Projects\KEL-Reflexivite\KEL-Reflexivite\obj\Debug\KEL-Reflexivite.pdb
+c:\users\charles\documents\visual studio 2015\Projects\KEL-Reflexivite\KEL-Reflexivite\obj\Debug\KEL_Reflexivite.ExplorateurClasses.resources
+C:\Users\Charles\Documents\Visual Studio 2015\Projects\KEL-Reflexivite\KEL-Reflexivite\obj\Debug\KEL_Reflexivite.ChoixClasses.resources
+C:\Users\Charles\Documents\Visual Studio 2015\Projects\KEL-Reflexivite\KEL-Reflexivite\obj\Debug\KEL_Reflexivite.ChoixConstructeurs.resources

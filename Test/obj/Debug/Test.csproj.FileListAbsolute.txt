@@ -1,0 +1,6 @@
+C:\Users\Charles\Documents\Visual Studio 2015\Projects\KEL-Reflexivite\Test\bin\Debug\Test.exe.config
+C:\Users\Charles\Documents\Visual Studio 2015\Projects\KEL-Reflexivite\Test\bin\Debug\Test.exe
+C:\Users\Charles\Documents\Visual Studio 2015\Projects\KEL-Reflexivite\Test\bin\Debug\Test.pdb
+C:\Users\Charles\Documents\Visual Studio 2015\Projects\KEL-Reflexivite\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+C:\Users\Charles\Documents\Visual Studio 2015\Projects\KEL-Reflexivite\Test\obj\Debug\Test.exe
+C:\Users\Charles\Documents\Visual Studio 2015\Projects\KEL-Reflexivite\Test\obj\Debug\Test.pdb
