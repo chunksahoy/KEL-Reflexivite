@@ -13,7 +13,13 @@ namespace KEL_Reflexivite
     public partial class ChoixClasses : Form
     {
         List<Explorateur> Explor;
-
+        Explorateur choix;
+        public Explorateur Choix
+        {
+            get { return choix; }
+            private set { choix = value; }
+        }
+        public int IndexConstructeur { get; private set; }
         public ChoixClasses()
         {
             InitializeComponent();
@@ -37,7 +43,8 @@ namespace KEL_Reflexivite
             ChoixConstructeurs diag = new ChoixConstructeurs(Explor[CB_Classes.SelectedIndex]);
             if(diag.ShowDialog() == DialogResult.OK)
             {
-
+                Choix = Explor[CB_Classes.SelectedIndex];
+                IndexConstructeur = diag.IndexConstructeur;
             }
         }
     }

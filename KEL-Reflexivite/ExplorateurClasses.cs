@@ -14,13 +14,13 @@ namespace KEL_Reflexivite
     public partial class ExplorateurClasses : Form
     {
         List<Explorateur> explorateurs = new List<Explorateur>() ;
-        //var magie = null;
+        Explorateur Choix;
+        int IndexConstructeur;
         public List<Explorateur> Explorateurs
         {
             get { return explorateurs; }
             private set { explorateurs = value; }
         }
-        string[] Statut = { "Inerte", "Actif" };
         public ExplorateurClasses()
         {
             InitializeComponent();
@@ -29,10 +29,6 @@ namespace KEL_Reflexivite
         private void RemplirTypes()
         {
             Explorateurs.Add(new Explorateur(new ClasseMagique()));
-        }
-        private void VerifierEtat()
-        {
-
         }
         private void Nettoyer()
         {
@@ -60,6 +56,28 @@ namespace KEL_Reflexivite
                 LB_Methodes.Items.Add(mi.ToString());
             }
         }
+        private void InteractionObjet()
+        {
+            var magie = Choix.InvoquerConstructeur(Activator.CreateInstance(Choix.Type), IndexConstructeur, new object[] { });
+            if (magie != null)
+            {
+                LBL_Statut.Text = "Actif";
+                ChoixMethodes diag = new ChoixMethodes(Choix);
+                if(diag.ShowDialog() == DialogResult.OK)
+                {
+                    int i = diag.IndexMethode;
+                    object ob = Choix.Methodes[i].ReturnType.ToString() == "System.String" ? "" : 
+                                Activator.CreateInstance(Choix.Methodes[i].ReturnType, null);
+                    Choix.InvoquerMethode(ob, i, magie, new object[] { });
+                    MessageBox.Show(Choix.InvoquerMethode(ob, i, magie, new object[] { }).ToString());
+                }
+                LBL_Statut.Text = "Inerte";
+            }
+            else
+            {
+                MessageBox.Show("L'objet n'as pas pu être créé");
+            }
+        }
         private void ConstructeurClasses_Load(object sender, EventArgs e)
         {
             AfficherTypes();
@@ -75,7 +93,9 @@ namespace KEL_Reflexivite
             ChoixClasses diag = new ChoixClasses(Explorateurs);
             if(diag.ShowDialog() == DialogResult.OK)
             {
-
+                Choix = diag.Choix;
+                IndexConstructeur = diag.IndexConstructeur;
+                InteractionObjet();
             }
         }
     }

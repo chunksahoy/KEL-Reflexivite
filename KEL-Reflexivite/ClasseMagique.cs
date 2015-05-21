@@ -9,6 +9,7 @@ namespace KEL_Reflexivite
     public class ClasseMagique
     {
         int Secret = 10;
+        string Message = "J'aime mon prof";
         public ClasseMagique()
         {
 
@@ -20,6 +21,14 @@ namespace KEL_Reflexivite
         public int SecretUnivers()
         {
             return ((Secret / 2) + 1) * 7;
+        }
+        public double Tarte()
+        {
+            return Math.PI;
+        }
+        public string MessageSecret()
+        {
+            return Message;
         }
     }
 }
