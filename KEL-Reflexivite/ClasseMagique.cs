@@ -1,4 +1,15 @@
-﻿using System;
+﻿/**************************************************************************|
+|                                                                          |
+|  ClasseMagique                                                           |
+|  Charles Hunter-Roy,                                                     |
+|  Daren Ken Saint-Laurent                                                 |
+|  2015                                                                    |
+|                                                                          |
+|  Classe se voulant très simpliste, ne sert qu'à prouver                  |
+|  le concept de l'explorateur de classe.                                  |
+|                                                                          |
+***************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

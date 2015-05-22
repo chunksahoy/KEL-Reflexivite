@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22310.1
+VisualStudioVersion = 14.0.22823.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KEL-Reflexivite", "KEL-Reflexivite\KEL-Reflexivite.csproj", "{DFAFF2BD-79EF-41F2-8544-69CC1DE69551}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{B83C7BE7-11E0-467F-A928-163F803EB0B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{DFAFF2BD-79EF-41F2-8544-69CC1DE69551}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFAFF2BD-79EF-41F2-8544-69CC1DE69551}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFAFF2BD-79EF-41F2-8544-69CC1DE69551}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B83C7BE7-11E0-467F-A928-163F803EB0B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B83C7BE7-11E0-467F-A928-163F803EB0B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B83C7BE7-11E0-467F-A928-163F803EB0B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B83C7BE7-11E0-467F-A928-163F803EB0B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

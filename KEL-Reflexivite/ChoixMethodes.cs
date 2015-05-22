@@ -1,4 +1,15 @@
-﻿using System;
+﻿/**************************************************************************|
+|                                                                          |
+|  ChoixConstructeurs                                                      |
+|  Charles Hunter-Roy,                                                     |
+|  Daren Ken Saint-Laurent                                                 |
+|  2015                                                                    |
+|                                                                          |
+|  Petite fenêtre offrant un simple menu qui offre le choix                |
+|  de la méthode à utiliser.                                               |
+|                                                                          |
+***************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

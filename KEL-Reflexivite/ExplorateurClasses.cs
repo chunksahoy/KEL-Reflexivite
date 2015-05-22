@@ -1,4 +1,16 @@
-﻿using System;
+﻿/**************************************************************************|
+|                                                                          |
+|  ExplorateurClasses                                                      |
+|  Charles Hunter-Roy,                                                     |
+|  Daren Ken Saint-Laurent                                                 |
+|  2015                                                                    |
+|                                                                          |
+|  Fenêtre principale, offrant une vue d'ensembles                         |
+|  sur les objets couverts, sans rentrer dans les détails.                 |
+|  C'est à partir du menu que l'on peut créer un nouvel objet.             |
+|                                                                          |
+***************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,8 +23,10 @@ using System.Windows.Forms;
 
 namespace KEL_Reflexivite
 {
+
     public partial class ExplorateurClasses : Form
     {
+
         List<Explorateur> explorateurs = new List<Explorateur>() ;
         Explorateur Choix;
         int IndexConstructeur;
@@ -26,6 +40,7 @@ namespace KEL_Reflexivite
             InitializeComponent();
             RemplirTypes();
         }
+
         private void RemplirTypes()
         {
             Explorateurs.Add(new Explorateur(new ClasseMagique()));
@@ -56,6 +71,11 @@ namespace KEL_Reflexivite
                 LB_Methodes.Items.Add(mi.ToString());
             }
         }
+        /// <summary>
+        ///  Ici on créé l'objet choisi avec le constructeur demandé, 
+        ///  et on ouvre un dialogue offrant un choix de méthode, pour en afficher le résultat
+        ///  tout ça de manière très simpliste bien sûr 
+        /// </summary>
         private void InteractionObjet()
         {
             var magie = Choix.InvoquerConstructeur(Activator.CreateInstance(Choix.Type), IndexConstructeur, new object[] { });
@@ -66,10 +86,22 @@ namespace KEL_Reflexivite
                 if(diag.ShowDialog() == DialogResult.OK)
                 {
                     int i = diag.IndexMethode;
-                    object ob = Choix.Methodes[i].ReturnType.ToString() == "System.String" ? "" : 
-                                Activator.CreateInstance(Choix.Methodes[i].ReturnType, null);
-                    Choix.InvoquerMethode(ob, i, magie, new object[] { });
-                    MessageBox.Show(Choix.InvoquerMethode(ob, i, magie, new object[] { }).ToString());
+                    try
+                    {
+                        object ob = Choix.Methodes[i].ReturnType.ToString() == "System.String" ? "" :
+                        Activator.CreateInstance(Choix.Methodes[i].ReturnType, new object[] { });
+                        Choix.InvoquerMethode(ob, i, magie, new object[] { });
+                        MessageBox.Show(Choix.InvoquerMethode(ob, i, magie, new object[] { }).ToString());
+                    }
+                    catch(Explorateur.Erreur er)
+                    {
+                        MessageBox.Show(er.Message.ToString());
+                    }
+                    catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                    }
+
                 }
                 LBL_Statut.Text = "Inerte";
             }
